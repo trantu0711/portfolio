@@ -84,9 +84,9 @@ const Contact = () => {
           {/* CỘT TRÁI: INFO */}
           <div className="lg:col-span-2 space-y-6 ">
             {contactInfo.map((info, index) => (
-              <div key={index} className="group p-5 rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between">
+              <div key={index} className="group p-5 rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/5">
                 <div className="flex items-center gap-5" >
-                  <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 transition-colors duration-300">
+                  <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 transition-colors duration-300 group-hover:scale-110">
                     {info.icon}
                   </div>
                   <div>
