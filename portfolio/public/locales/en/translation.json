@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "home" : "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "skills": "Skills"
+  },
+
+  "hero": {
+    "typewriter": [
+      "Fullstack Developer Intern",
+      "Frontend Developer Intern",
+      "Backend Developer Intern"
+    ],
+    "greeting": "Hi there, I am",
+    "name": "Minh Tu",
+    "description": "IT student at STU. A passionate young developer dedicated to building optimized web systems from UI to performance.",
+    "buttons": {
+      "projects": "My Projects",
+      "cv": "Download CV"
+    },
+    "badge": "Software Developer",
+    "social": {
+      "connect": "Connect:"
+    }
+
+  },
+  "about": {
+    "section_title": "About Me",
+    "intro_title": "I am...",
+    "intro_description": "A fresh IT graduate with hands-on experience in building RESTful APIs using ASP.NET and integrating user interfaces with ReactJS. ",
+     "intro_desc_01": "Passionate about backend development, system design, and building scalable web applications. I am actively seeking opportunities to grow as a professional Software Developer.",
+    "intro_desc_02": "I am a creative person who loves learning and is always ready to take on new challenges. I also have a bit of talent in drawing, which is why I’m very interested in UI/UX design. I believe that this combination will help me develop more comprehensively in the field of information technology.",
+    "education": {
+      "title": "Education",
+      "school": "Saigon Technology University (STU)",
+      "major": "Major: Information Technology",
+      "duration": "2021 - 2025"
+    },
+    "experience": {
+      "title": "Experience",
+      "role": "Internship Project - Frontend Developer",
+      "project": "PDF to ICS Web Application",
+      "duration": "Mar 2025 - May 2025",
+      "tasks": [
+        "Complete UI/UX design using Figma.",
+        "Built frontend with ReactJS using component-based architecture.",
+        "Integrated REST APIs for PDF processing and data upload.",
+        "Improved UX and optimized responsive design."
+      ]
+    },
+    "interests": {
+      "title": "Activities & Interests",
+      "activities_label": "Activities",
+      "activities_content": "Class Union Member (2021-2025)\n- Organized and coordinated student activities for class and faculty.\n'Full Moon Festival' Volunteer\n- Organized gift distribution for children and environmental cleaning activities.",
+      "hobbies_label": "Sports & Entertainment",
+      "hobbies_list": [
+        "Football",
+        "Badminton",
+        "Volleyball",
+        "Gaming",
+        "Reading"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "I am always ready for Internship positions",
+    "connect": "Connect with me:",
+    "form": {
+      "name": "Full Name",
+      "email": "Your Email",
+      "message": "Message...",
+      "send": "Send Message",
+      "placeholder_message": "Hello Tu..."
+    },
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": {
+        "line1": "Address",
+        "line2": "District 8, Ho Chi Minh City"
+      }
+    },
+    "messages": "Something went wrong. Please try again!",
+    "social": {
+      "loading": "Sending...",
+      "success": "Sent Successfully!"
+    }
+  },
+  "footer": {
+    "cta": "Let's collaborate!",
+    "quote": "A beautiful flower blooms quickly but only shines for a fleeting moment before fading. Planting a tree, however, is different, it may take years for the first sweet harvest, but it yields fruit consistently every year. Pursuing a career is much the same. Some successes are like those flowers - short-lived. But true glory is like nurturing a tree - demanding years of sacrifice, weathering storms, and immense effort to build roots that run deep, allowing branches to reach high and eventually bear the sweetest fruit.",
+    "copy": "© {{year}} Minh Tú. Built with ReactJS & Tailwind CSS."
+  },
+
+  
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "The toolkit I use to build products",
+    "soft_skills_title": "Soft Skills",
+    "soft_skills_list": ["Teamwork", "Self-learning", "Time Management", "Basic English"],
+    "groups": {
+      "frontend": "Frontend Development",
+      "backend": "Backend & Database",
+      "tools": "Tools & Others"
+    }
+  },
+
+  
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Real-world products I have built",
+    "items": {
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "desc": "A personal website showcasing skills and projects, featuring i18n and dark mode."
+      },
+      "room_rental": {
+        "title": "Room Rental Search & Management",
+        "desc": "A platform connecting landlords and tenants, integrated with VNPay and JWT."
+      },
+      "vinherb": {
+        "title": "Vinherb Skincare Website",
+        "desc": "E-commerce interface for skincare products with a modern and responsive design."
+      },
+      "figma_design": {
+        "title": "Mobile E-commerce UI Design",
+        "desc": ""
+      }
+    }
+  }
+
+
+}

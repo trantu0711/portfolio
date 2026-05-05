@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "about": "Giới Thiệu",
+    "projects": "Dự Án",
+    "contact": "Liên Hệ",
+    "skills": "Kỹ Năng"
+  },
+  "hero": {
+    "typewriter": [
+      "Thực tập sinh Fullstack",
+      "Thực tập sinh Frontend",
+      "Thực tập sinh Backend"
+    ],
+    "greeting": "Chào bạn, mình là",
+    "name": "Minh Tú",
+    "description": "Sinh viên công nghệ thông tin trường STU. Một lập trình viên trẻ đam mê xây dựng các hệ thống web tối ưu từ giao diện đến hiệu năng.",
+    "buttons": {
+      "projects": "Dự án của tôi",
+      "cv": "Tải CV"
+    },
+    "badge": "Lập Trình Viên",
+    "social": {
+      "connect": "Kết nối:"
+    }
+  },
+  "about": {
+    "section_title": "Về Bản Thân",
+    "intro_title": "Mình là...",
+    "intro_description": "Sinh viên mới tốt nghiệp ngành CNTT, có kinh nghiệm thực tế trong việc xây dựng API RESTful bằng ASP.NET và tích hợp giao diện người dùng với ReactJS. ",
+    "intro_desc_01": "Quan tâm đến phát triển backend, thiết kế hệ thống và xây dựng các ứng dụng web có khả năng mở rộng. Mình luôn tìm kiếm cơ hội phát triển bản thân với tư cách là một Lập trình viên chuyên nghiệp.",
+    "intro_desc_02": "Bản thân là người thích sáng tạo, ham học hỏi và luôn sẵn sàng đương đầu với những thử thách mới, có chút năng kiếu về hội họa nên mình cũng rất thích thiết kế UI/UX. Mình tin rằng sự kết hợp này sẽ giúp mình phát triển toàn diện hơn trong lĩnh vực công nghệ thông tin.",
+    "education": {
+      "title": "Học Vấn",
+      "school": "Đại học Công nghệ Sài Gòn (STU)",
+      "major": "Chuyên ngành: Công nghệ thông tin",
+      "duration": "2021 - 2025"
+    },
+    "experience": {
+      "title": "Kinh Nghiệm",
+      "role": "Thực tập tốt nghiệp - Frontend Developer",
+      "project": "PDF to ICS Web Application",
+      "duration": "03/2025 - 05/2025",
+      "tasks": [
+        "Thiết kế UI/UX hoàn chỉnh bằng Figma.",
+        "Xây dựng frontend với ReactJS theo component-based.",
+        "Tích hợp REST API xử lý file PDF và upload dữ liệu.",
+        "Cải thiện trải nghiệm người dùng và tối ưu responsive."
+      ]
+    },
+    "interests": {
+      "title": "Hoạt Động & Sở Thích",
+      "activities_label": "Hoạt Động",
+      "activities_content": "Ủy viên Hội & Đoàn lớp (2021-2025)\n- Tham gia tổ chức và điều phối các hoạt động sinh viên, lớp và khoa.\nTình nguyện viên 'Đêm hội trăng rằm'\n- Tổ chức phát quà cho các em nhỏ và dọn rác bảo vệ môi trường.",
+      "hobbies_label": "Thể Thao & Giải Trí",
+      "hobbies_list": [
+        "Bóng đá",
+        "Cầu lông",
+        "Bóng chuyền",
+        "Game",
+        "Đọc sách"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Liên Hệ Với Tôi",
+    "subtitle": "Mình luôn sẵn sàng cho vị trí Thực tập sinh",
+    "connect": "Kết nối với mình:",
+    "form": {
+      "name": "Họ và tên",
+      "email": "Email của bạn",
+      "message": "Lời nhắn...",
+      "send": "Gửi Tin Nhắn",
+      "placeholder_message": "Chào Tú..."
+    },
+    "labels": {
+      "email": "Email",
+      "phone": "Điện thoại",
+      "address": {
+        "line1": "Địa chỉ",
+        "line2": "Quận 8, TP Hồ Chí Minh"
+      }
+    },
+    "messages": "Đã có lỗi xảy ra. Vui lòng thử lại!",
+    "social": {
+      "loading": "Đang gửi...",
+      "success": "Gửi thành công!"
+    }
+  },
+
+  "footer": {
+    "cta": "Hãy cùng hợp tác!",
+    "quote": "Một bông hoa đẹp cần ít thời gian để nở nhưng chỉ có thể khoe sắc ngắn ngủi rồi tàn phai. Nhưng trồng cây thì khác, có thể mất vài năm để có quả ngọt đầu tiên nhưng lại đều đặn kết trái hằng năm. Theo đuổi sự nghiệp cũng vậy, có những thành công như loài hoa kia sớm nở tối tàn, lại có vinh quang như vun trồng một cái cây - phải đánh đổi nhiều năm, dầm mưa dãi nắng, đổ bao công sức để bộ rễ vững vàng chôn sâu dưới lòng đất, cành lá vươn mình và kết thành trái ngọt.",
+    "copy": "© {{year}} Minh Tú. Xây dựng bằng ReactJS & Tailwind CSS."
+  },
+
+  "skills": {
+    "title": "Kỹ Năng Chuyên Môn",
+    "subtitle": "Bộ công cụ mình sử dụng để xây dựng sản phẩm",
+    "soft_skills_title": "Kỹ Năng Mềm",
+    "soft_skills_list": [
+      "Làm việc nhóm",
+      "Tự học & Cầu tiến",
+      "Quản lý thời gian",
+      "Tiếng Anh cơ bản"
+    ],
+    "groups": {
+      "frontend": "Frontend Development",
+      "backend": "Backend & Database",
+      "tools": "Công cụ & Khác"
+    }
+  },
+
+  "projects": {
+    "title": "Dự Án Nổi Bật",
+    "subtitle": "Những sản phẩm thực tế mình đã xây dựng",
+    "items": {
+      "portfolio": { 
+        "title": "Portfolio Cá Nhân",
+        "desc": "Trang web cá nhân giới thiệu kỹ năng và dự án, tích hợp đa ngôn ngữ và chế độ tối."
+      },
+      "room_rental": {
+        "title": "Website Tìm Kiếm & Quản Lý Phòng Trọ",
+        "desc": "Hệ thống kết nối chủ nhà và người thuê, tích hợp thanh toán VNPay và xác thực JWT."
+      },
+      "vinherb": {
+        "title": "Website Mỹ Phẩm Vinherb",
+        "desc": "Giao diện website bán sản phẩm chăm sóc da với thiết kế hiện đại, tối ưu trải nghiệm."
+      },
+      "figma_design": {
+        "title": "Thiết kế UI/UX E-commerce Mobile",
+        "desc": ""
+      }
+    }
+  }
+
+}
