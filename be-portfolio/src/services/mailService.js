@@ -1,34 +1,25 @@
 import nodemailer from 'nodemailer';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
 
 export const sendContactEmail = async (formData) => {
-  const { name, email, message } = formData;
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587, 
+    secure: false, 
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false // Giúp tránh lỗi kết nối trên một số server
+    }
+  });
 
   const mailOptions = {
-    from: `"${name}" <${email}>`, // Hiển thị tên người gửi
-    to: process.env.EMAIL_USER,    // Gửi về chính mail của Tú
-    subject: `📩 Liên hệ mới từ: ${name}`,
-    html: `
-      <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee;">
-        <h2 style="color: #2563eb;">Bạn có tin nhắn mới từ Portfolio</h2>
-        <p><strong>Người gửi:</strong> ${name}</p>
-        <p><strong>Email liên hệ:</strong> ${email}</p>
-        <p><strong>Nội dung:</strong></p>
-        <div style="background: #f9fafb; padding: 15px; border-radius: 8px;">
-          ${message}
-        </div>
-      </div>
-    `,
+    from: formData.email,
+    to: process.env.EMAIL_USER,
+    subject: `Tin nhắn mới từ Portfolio: ${formData.name}`,
+    text: `Người gửi: ${formData.name}\nEmail: ${formData.email}\nTin nhắn: ${formData.message}`,
   };
 
   return transporter.sendMail(mailOptions);
