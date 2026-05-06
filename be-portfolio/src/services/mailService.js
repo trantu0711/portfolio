@@ -2,7 +2,6 @@ import nodemailer from 'nodemailer';
 
 export const sendContactEmail = async (formData) => {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
     host: 'smtp.gmail.com',
     port: 587, 
     secure: false, 
