@@ -2,16 +2,17 @@ import nodemailer from 'nodemailer';
 
 export const sendContactEmail = async (formData) => {
  const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  // Thay 'smtp.gmail.com' bằng IP trực tiếp của Google để ép dùng IPv4
+  host: '74.125.200.108', 
   port: 587,
-  secure: false, // Port 587 bắt buộc false
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
   tls: {
     rejectUnauthorized: false,
-    minVersion: "TLSv1.2" // Ép dùng phiên bản TLS bảo mật chuẩn
+    servername: 'smtp.gmail.com' // Phải có dòng này khi dùng IP làm host
   },
   connectionTimeout: 20000, // Tăng thời gian chờ lên 20 giây
   greetingTimeout: 20000,
