@@ -1,30 +1,24 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+// Khởi tạo Resend với API Key từ biến môi trường
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendContactEmail = async (formData) => {
- const transporter = nodemailer.createTransport({
-  // Thay 'smtp.gmail.com' bằng IP trực tiếp của Google để ép dùng IPv4
-  host: '74.125.200.108', 
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-  tls: {
-    rejectUnauthorized: false,
-    servername: 'smtp.gmail.com' // Phải có dòng này khi dùng IP làm host
-  },
-  connectionTimeout: 20000, // Tăng thời gian chờ lên 20 giây
-  greetingTimeout: 20000,
-  socketTimeout: 20000,
-});
-  
-  const mailOptions = {
-    from: formData.email,
-    to: process.env.EMAIL_USER,
-    subject: `Tin nhắn mới từ Portfolio: ${formData.name}`,
-    text: `Người gửi: ${formData.name}\nEmail: ${formData.email}\nTin nhắn: ${formData.message}`,
-  };
-
-  return transporter.sendMail(mailOptions);
+  try {
+    const data = await resend.emails.send({
+      from: 'onboarding@resend.dev', // Đây là email mặc định của Resend cho tài khoản miễn phí
+      to: 'trantu7112003@gmail.com', // Email nhận của Tú
+      subject: `Tin nhắn mới từ Portfolio: ${formData.name}`,
+      html: `
+        <h3>Bạn có tin nhắn mới từ Portfolio!</h3>
+        <p><strong>Người gửi:</strong> ${formData.name}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Nội dung:</strong> ${formData.message}</p>
+      `,
+    });
+    return { success: true, data };
+  } catch (error) {
+    console.error("Lỗi Resend:", error);
+    throw error;
+  }
 };
