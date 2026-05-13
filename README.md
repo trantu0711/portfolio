@@ -1,61 +1,54 @@
-# 🚀 Minh Tú - Personal Portfolio
+# 🚀 Minh Tú - Personal Portfolio (Fullstack Project)
 
-Dự án Portfolio cá nhân được xây dựng với mục tiêu giới thiệu kỹ năng, dự án và kinh nghiệm của mình đến các nhà tuyển dụng. Trang web được tối ưu hóa về hiệu suất, giao diện hiện đại và hỗ trợ đa ngôn ngữ.
+Dự án Portfolio cá nhân được xây dựng để giới thiệu kỹ năng, dự án và kinh nghiệm đến nhà tuyển dụng. Hệ thống được thiết kế theo kiến trúc Fullstack hiện đại, tối ưu hóa hiệu suất và khả năng mở rộng.
 
 ## ✨ Tính năng nổi bật
-*   **Đa ngôn ngữ (i18n):** Hỗ trợ chuyển đổi mượt mà giữa Tiếng Việt và Tiếng Anh.
-*   **Dark/Light Mode:** Giao diện thích ứng với tùy chọn hệ thống hoặc người dùng.
-*   **Contact Form:** Tích hợp gửi email trực tiếp qua Backend Node.js.
-*   **Responsive Design:** Hiển thị hoàn hảo trên mọi thiết bị (Mobile, Tablet, Desktop).
-*   **Custom Hooks:** Tách biệt logic API và UI giúp mã nguồn sạch sẽ, dễ bảo trì.
+*   **Đa ngôn ngữ (i18n)**: Chuyển đổi mượt mà giữa Tiếng Việt và Tiếng Anh.
+*   **Dark/Light Mode**: Giao diện thích ứng với tùy chọn hệ thống hoặc người dùng.
+*   **Contact Form**: Tích hợp gửi email trực tiếp qua Backend Node.js sử dụng **Resend API**.
+*   **Responsive Design**: Hiển thị hoàn hảo trên mọi thiết bị (Mobile, Tablet, Desktop).
+*   **Performance**: Tối ưu hóa tốc độ load trang và hiệu ứng mượt mà với Framer Motion.
 
 ## 🛠 Công nghệ sử dụng
-*   **Frontend:** ReactJS, Tailwind CSS, Framer Motion.
-*   **Icon & UI:** Lucide React, Boxicons.
-*   **Quản lý trạng thái:** React Hooks, Context API.
-*   **Thư viện hỗ trợ:** Axios, i18next, React Hot Toast.
 
-## 📦 Cài đặt dự án
-1. Clone dự án:
-   ```bash
-   git clone https://github.com/trantu0711/portfolio.git
+### Frontend
+*   **Core**: ReactJS, Tailwind CSS, Framer Motion.
+*   **State Management**: React Hooks, Context API.
+*   **Thư viện**: Axios, i18next, React Hot Toast.
 
-Cài đặt thư viện
-npm install
-Chạy dự án ở môi trường local:
-   
-   npm run dev
+### Backend
+*   **Core**: Node.js, Express.
+*   **Email Service**: **Resend SDK** (Giải pháp thay thế SMTP để đảm bảo 100% tỷ lệ gửi mail thành công trên Cloud).
+*   **Security**: Cấu hình CORS và bảo mật biến môi trường.
 
-## 2. README cho Backend (Mail Service)
-Tạo file `README.md` trong thư mục `be-portfolio/`:
+## 🧱 Cấu trúc thư mục
+*   `/frontend`: Mã nguồn giao diện ReactJS.
+*   `/be-portfolio`: Mã nguồn API xử lý Logic gửi mail.
 
+## 📦 Cài đặt & Khởi chạy
 
-# 🛠 Portfolio Backend Service
+### 1. Clone dự án
+```bash
+git clone [https://github.com/trantu0711/portfolio.git](https://github.com/trantu0711/portfolio.git).
+```
+### 2. Cấu hình Backend (.env), contact.jsx
+Tạo file .env trong thư mục be-portfolio/:
+Vào resend đăng ký tài khoản và lấy API key
+Đoạn mã
+RESEND_API_KEY=re_your_api_key_here
+PORT=10000
 
-Hệ thống Backend chuyên trách việc xử lý logic gửi email thông báo từ form liên hệ của trang Portfolio.
+Đổi đường dẫn API trong contact.jsx thành đường dẫn chạy BE của bạn
 
-## ⚙️ Chức năng chính
-*   **API Endpoint:** Cung cấp API POST `/api/contact` để nhận dữ liệu từ Frontend.
-*   **Nodemailer Integration:** Kết nối với Gmail SMTP để gửi mail tự động.
-*   **Security:** Sử dụng biến môi trường (`.env`) để bảo mật thông tin tài khoản.
-*   **CORS:** Cấu hình cho phép Frontend truy cập tài nguyên an toàn.
+### 3. Khởi chạy
+Frontend: cd frontend && npm install && npm run dev.
 
-## 🧱 Cấu trúc dự án (MVC Pattern)
-*   `src/index.js`: Điểm vào của ứng dụng.
-*   `src/controllers/`: Xử lý điều phối yêu cầu và phản hồi API.
-*   `src/services/`: Chứa logic nghiệp vụ gửi email.
-*   `src/routes/`: Định nghĩa các luồng API.
+Backend: cd be-portfolio && npm install && node src/index.js.
 
-## 🚀 Hướng dẫn khởi chạy
-1. Cài đặt các gói phụ thuộc: `npm install`.
-2. Tạo file `.env` và cấu hình các biến:
-   
-   EMAIL_USER=your_email@gmail.com
-   EMAIL_PASS=your_app_password
-   PORT=5000
+🚀 Deployment
+Frontend: Được deploy trên Vercel.
 
-Chạy server
-npm run dev
+Backend: Được deploy trên Render.
 
-## 👨‍💻 Tác giả
-**Trần Minh Tú** - *Newly graduated IT Student seeking Internship in Ho Chi Minh City.*
+👨‍💻 Tác giả
+Trần Minh Tú - Sinh viên IT mới tốt nghiệp (Chuyên ngành Fullstack Development) đang tìm kiếm cơ hội thực tập/Junior tại TP.HCM.
