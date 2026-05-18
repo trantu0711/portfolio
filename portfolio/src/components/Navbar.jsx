@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-50/80 dark:bg-[#0b0b17]/80 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="w-full mx-auto px-6 flex justify-between items-center">
         
         {/* Logo */}
         <div className="text-2xl font-black text-blue-600 dark:text-blue-400 md:pl-10 tracking-tighter">
@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
 
         {/* Menu Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           <a href="#home" className="font-medium hover:text-blue-500 transition-colors dark:text-slate-300 dark:hover:text-white">{t('nav.home')}</a>
           <a href="#about" className="font-medium hover:text-blue-500 transition-colors dark:text-slate-300 dark:hover:text-white">{t('nav.about')}</a>
           <a href="#skills" className="font-medium hover:text-blue-500 transition-colors dark:text-slate-300 dark:hover:text-white">{t('nav.skills')}</a>

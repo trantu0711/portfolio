@@ -44,6 +44,7 @@
       "project": "PDF to ICS Web Application",
       "duration": "Mar 2025 - May 2025",
       "tasks": [
+        "Technologies: ReactJS, JavaScript, HTML5, CSS3, REST API, Figma",
         "Complete UI/UX design using Figma.",
         "Built frontend with ReactJS using component-based architecture.",
         "Integrated REST APIs for PDF processing and data upload.",

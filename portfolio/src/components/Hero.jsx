@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 max-w-[95%]">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* CỘT 1: NỘI DUNG VĂN BẢN */}
           <motion.div
@@ -47,7 +47,7 @@ const Hero = () => {
               ✌️ Say Hi😘
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed pr-10">
               {t('hero.description')}
             </p>
 
@@ -92,7 +92,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-indigo-500/10 rounded-3xl -rotate-3 border border-slate-200 dark:border-slate-800" />
 
               {/* Khung ảnh chính */}
-              <div className="absolute inset-4 bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl">
+              <div className="absolute inset-4 bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl ">
                 <img
                   alt="Avatar"
                   className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 hover:scale-105 transition-all duration-700"

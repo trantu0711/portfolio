@@ -42,6 +42,7 @@
       "project": "PDF to ICS Web Application",
       "duration": "03/2025 - 05/2025",
       "tasks": [
+        "Công nghệ: ReactJS, JavaScript, HTML5, CSS3, REST API, Figma",
         "Thiết kế UI/UX hoàn chỉnh bằng Figma.",
         "Xây dựng frontend với ReactJS theo component-based.",
         "Tích hợp REST API xử lý file PDF và upload dữ liệu.",

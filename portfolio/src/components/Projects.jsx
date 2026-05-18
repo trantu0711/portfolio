@@ -52,7 +52,7 @@ const Projects = () => {
         </div>
 
         {/* Danh sách Card dự án */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projectList.map((project) => (
             <motion.div 
               key={project.id}
@@ -102,7 +102,7 @@ const Projects = () => {
                   <a 
                     href={project.demo}
                     target="_blank"
-                    className="flex-1 bg-slate-700 dark:bg-slate-700 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-600 transition-colors"
+                    className="flex-1 bg-slate-800 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-600 transition-colors"
                   >
                     <ExternalLink size={20} /> Demo
                   </a>

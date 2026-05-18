@@ -106,7 +106,7 @@ const Contact = () => {
               <p className="text-xl font-medium opacity-80 mb-6 tracking-widest dark:text-white">{t('contact.connect')}</p>
               <div className="flex justify-center lg:justify-start gap-4">
                 {socialLinks.map((social, index) => (
-                  <a key={index} href={social.link} target="_blank" className="w-12 h-12 bg-slate-100 dark:bg-slate-50/10 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-white/20 transition-all dark:text-white text-slate-800 hover:scale-110">
+                  <a key={index} href={social.link} target="_blank" className="w-12 h-12 border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50  rounded-2xl flex items-center justify-center  transition-all dark:text-white text-slate-800 hover:scale-110">
                     {social.icon}
                   </a>
                 ))}
