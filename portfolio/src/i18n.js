@@ -8,8 +8,8 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: "vi",
-    fallbackLng: 'vi',
+    lng: "en",
+    fallbackLng: 'en', // cấu hình ngôn ngữ mặc định
     debug: true, // Bật cái này lên để kiểm tra lỗi ở F12 Console
     interpolation: {
       escapeValue: false,
