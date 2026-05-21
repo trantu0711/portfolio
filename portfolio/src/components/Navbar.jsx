@@ -43,7 +43,7 @@ const Navbar = () => {
 
   // 3. Hàm chuyển đổi ngôn ngữ
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'vi' ? 'en' : 'vi';
+    const newLang = i18n.language === 'en' ? 'vi' : 'en';
     i18n.changeLanguage(newLang);
   };
 
