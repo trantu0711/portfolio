@@ -17,7 +17,7 @@ const Skills = () => {
     {
       title: t('skills.groups.backend'),
       icon: <Database className="text-emerald-400" size={28} />,
-      skills: ["ASP.NET (C#)", "MySQL", "PHP", "SQL Server"],
+      skills: ["ASP.NET (C#)", "MySQL", "PHP", "SQL Server", "NodeJS"],
       color: "from-emerald-500/20 to-teal-500/5",
       borderColor: "group-hover:border-emerald-500/50",
       span: "md:col-span-1"
