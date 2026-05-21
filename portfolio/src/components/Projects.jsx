@@ -10,7 +10,7 @@ const Projects = () => {
     {
       id: "portfolio",
       image: "index_portfolio.png",
-      tags: ["ReactJS", "Tailwind", "i18n"],
+      tags: ["ReactJS", "Tailwind", "i18n", "NodeJS"],
       github: "https://github.com/trantu0711/portfolio",
       demo: null
     },
