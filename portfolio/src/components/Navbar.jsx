@@ -75,7 +75,7 @@ const Navbar = () => {
           >
             <Languages size={20} />
             <span className="text-sm font-bold uppercase tracking-wider">
-              {i18n.language === 'vi' ? 'VI' : 'EN'}
+              {i18n.language === 'en' ? 'VI' : 'EN'}
             </span>
           </button>
 
