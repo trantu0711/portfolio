@@ -6,9 +6,9 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="py-20 bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300"> 
+    <section id="about" className="py-20 bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300">
       <div className="container mx-auto px-6 w-full lg:w-[80%]">
-        
+
         {/* Tiêu đề phần */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
@@ -18,7 +18,7 @@ const About = () => {
         </div>
 
         {/* Giới thiệu ngắn */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -27,17 +27,34 @@ const About = () => {
           <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
             <span className="w-8 h-1 bg-blue-500 rounded-full"></span>
             {t('about.intro_title')}
+            
           </h3>
           <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
-            {t('about.intro_description')}
+            {t('about.intro_description.0')}
           </p>
           <br/>
           <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
-            {t('about.intro_desc_01')}
+            {t('about.intro_description.1')}
           </p>
           <br/>
           <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
-            {t('about.intro_desc_02')}
+            {t('about.intro_description.2')}
+          </p>
+          <br/>
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 leading-relaxed text-center text-lg md:text-xl max-w-6xl">
+            {t('about.intro_description.3')}
+          </p>
+          <br/>
+          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-center text-lg md:text-xl max-w-6xl whitespace-pre-line">
+            {t('about.intro_description.4')}
+          </p>
+          <br/>
+          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
+            {t('about.intro_description.5')}
+          </p>
+          <br/>
+          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
+            {t('about.intro_description.6')}
           </p>
 
         </motion.div>
@@ -47,7 +64,7 @@ const About = () => {
           <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-slate-200 dark:bg-slate-700 hidden md:block transform -translate-x-1/2"></div>
 
           {/* Cột trái: Học vấn */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -61,19 +78,19 @@ const About = () => {
             </div>
 
             <div className="relative pl-8 border-l-2 border-blue-500/30">
-               <div className="relative">
-                  <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-[#0b0b17]"></div>
-                  <h4 className="text-xl font-bold text-slate-800 dark:text-white">{t('about.education.school')}</h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-semibold mt-2">{t('about.education.major')}</p>
-                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mt-2">
-                    <Calendar size={14} /> {t('about.education.duration')}
-                  </div>
-               </div>
+              <div className="relative">
+                <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-[#0b0b17]"></div>
+                <h4 className="text-xl font-bold text-slate-800 dark:text-white">{t('about.education.school')}</h4>
+                <p className="text-blue-600 dark:text-blue-400 font-semibold mt-2">{t('about.education.major')}</p>
+                <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mt-2">
+                  <Calendar size={14} /> {t('about.education.duration')}
+                </div>
+              </div>
             </div>
           </motion.div>
 
           {/* Cột phải: Kinh nghiệm */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -87,30 +104,30 @@ const About = () => {
             </div>
 
             <div className="relative pl-8 border-l-2 border-indigo-500/30">
-               <div className="relative">
-                  <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-[#0b0b17]"></div>
-                  <h4 className="text-xl font-bold text-slate-800 dark:text-white">{t('about.experience.role')}</h4>
-                  <p className="text-indigo-600 dark:text-indigo-400 font-semibold mt-1">{t('about.experience.project')}</p>
-                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mt-2">
-                     <Calendar size={14} /> {t('about.experience.duration')}
-                  </div>
-                  
-                  <ul className="mt-4 space-y-3 text-slate-600 dark:text-slate-400">
-                    {/* Lấy mảng từ file JSON */}
-                    {t('about.experience.tasks', { returnObjects: true }).map((text, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <ArrowRight size={16} className="mt-1 text-indigo-500 shrink-0" />
-                        <span className="text-sm md:text-base">{text}</span>
-                      </li>
-                    ))}
-                  </ul>
-               </div>
+              <div className="relative">
+                <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-[#0b0b17]"></div>
+                <h4 className="text-xl font-bold text-slate-800 dark:text-white">{t('about.experience.role')}</h4>
+                <p className="text-indigo-600 dark:text-indigo-400 font-semibold mt-1">{t('about.experience.project')}</p>
+                <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mt-2">
+                  <Calendar size={14} /> {t('about.experience.duration')}
+                </div>
+
+                <ul className="mt-4 space-y-3 text-slate-600 dark:text-slate-400">
+                  {/* Lấy mảng từ file JSON */}
+                  {t('about.experience.tasks', { returnObjects: true }).map((text, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <ArrowRight size={16} className="mt-1 text-indigo-500 shrink-0" />
+                      <span className="text-sm md:text-base">{text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         </div>
 
         {/* SECTION: HOẠT ĐỘNG & SỞ THÍCH */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -124,7 +141,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold dark:text-white">{t('about.interests.title')}</h3>
               </div>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="space-y-3">
                   <h5 className="font-bold text-pink-600 dark:text-pink-400 text-lg">{t('about.interests.activities_label')}</h5>
@@ -147,9 +164,9 @@ const About = () => {
             </div>
 
             <div className="hidden md:flex justify-center relative">
-                <div className="absolute inset-0 bg-pink-500/10 rounded-full blur-3xl"></div>
-                <Heart size={180} className="text-pink-500/10 relative animate-pulse" strokeWidth={1} />
-                <Heart size={80} className="text-pink-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+              <div className="absolute inset-0 bg-pink-500/10 rounded-full blur-3xl"></div>
+              <Heart size={180} className="text-pink-500/10 relative animate-pulse" strokeWidth={1} />
+              <Heart size={80} className="text-pink-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
             </div>
           </div>
         </motion.div>

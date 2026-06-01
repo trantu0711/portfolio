@@ -1,12 +1,11 @@
 {
   "nav": {
-    "home" : "Home",
+    "home": "Home",
     "about": "About",
     "projects": "Projects",
     "contact": "Contact",
     "skills": "Skills"
   },
-
   "hero": {
     "typewriter": [
       "Fullstack Developer Intern",
@@ -24,14 +23,19 @@
     "social": {
       "connect": "Connect:"
     }
-
   },
   "about": {
     "section_title": "About Me",
-    "intro_title": "I am...",
-    "intro_description": "A fresh IT graduate with hands-on experience in building RESTful APIs using ASP.NET and integrating user interfaces with ReactJS. ",
-     "intro_desc_01": "Passionate about backend development, system design, and building scalable web applications. I am actively seeking opportunities to grow as a professional Software Developer.",
-    "intro_desc_02": "I am a creative person who loves learning and is always ready to take on new challenges. I also have a bit of talent in drawing, which is why I’m very interested in UI/UX design. I believe that this combination will help me develop more comprehensively in the field of information technology.",
+    "intro_title": "Hi there, I am Tran Minh Tu ✌️",
+    "intro_description": [
+      "As a “newbie” in the tech industry, I firmly believe that exceptional products are driven by relentless curiosity and a continuous learning mindset.",
+      "Through academic and hands-on projects, I have developed a strong foundation in building RESTful APIs with ASP.NET Core and crafting responsive user interfaces using ReactJS. What excites me most is turning conceptual ideas into robust, production-ready applications that deliver real value to users.",
+      "Over time, I found myself becoming more drawn to:",
+      "“Build, Optimize, Grow”",
+      "Building stable, secure, and scalable backend systems.\nOptimizing user experience (UI/UX) alongside application performance.\nGrowing my technical expertise through every project and new challenge.",
+      "Additionally, my passion for arts gives me a unique perspective on UI/UX, allowing me to strike a balance between technical implementation and intuitive user experience.",
+      "Every project is an opportunity for me to learn, improve, and deploy a better version of myself."
+    ],
     "education": {
       "title": "Education",
       "school": "Saigon Technology University (STU)",
@@ -95,21 +99,22 @@
     "quote": "A beautiful flower blooms quickly but only shines for a fleeting moment before fading. Planting a tree, however, is different, it may take years for the first sweet harvest, but it yields fruit consistently every year. Pursuing a career is much the same. Some successes are like those flowers - short-lived. But true glory is like nurturing a tree - demanding years of sacrifice, weathering storms, and immense effort to build roots that run deep, allowing branches to reach high and eventually bear the sweetest fruit.",
     "copy": "© {{year}} Minh Tú. Built with ReactJS & Tailwind CSS."
   },
-
-  
   "skills": {
     "title": "Technical Skills",
     "subtitle": "The toolkit I use to build products",
     "soft_skills_title": "Soft Skills",
-    "soft_skills_list": ["Teamwork", "Self-learning", "Time Management", "Basic English"],
+    "soft_skills_list": [
+      "Teamwork",
+      "Self-learning",
+      "Time Management",
+      "Basic English"
+    ],
     "groups": {
       "frontend": "Frontend Development",
       "backend": "Backend & Database",
       "tools": "Tools & Others"
     }
   },
-
-  
   "projects": {
     "title": "Featured Projects",
     "subtitle": "Real-world products I have built",
@@ -132,6 +137,4 @@
       }
     }
   }
-
-
 }

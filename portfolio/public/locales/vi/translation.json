@@ -24,12 +24,20 @@
       "connect": "Kết nối:"
     }
   },
+
   "about": {
     "section_title": "Về Bản Thân",
-    "intro_title": "Mình là...",
-    "intro_description": "Sinh viên mới tốt nghiệp ngành CNTT, có kinh nghiệm thực tế trong việc xây dựng API RESTful bằng ASP.NET và tích hợp giao diện người dùng với ReactJS. ",
-    "intro_desc_01": "Quan tâm đến phát triển backend, thiết kế hệ thống và xây dựng các ứng dụng web có khả năng mở rộng. Mình luôn tìm kiếm cơ hội phát triển bản thân với tư cách là một Lập trình viên chuyên nghiệp.",
-    "intro_desc_02": "Bản thân là người thích sáng tạo, ham học hỏi và luôn sẵn sàng đương đầu với những thử thách mới, có chút năng kiếu về hội họa nên mình cũng rất thích thiết kế UI/UX. Mình tin rằng sự kết hợp này sẽ giúp mình phát triển toàn diện hơn trong lĩnh vực công nghệ thông tin.",
+    "intro_title": "Xin chào, mình là Trần Minh Tú ✌️",
+    "intro_description": [
+      "Là một “newbie” trong ngành công nghệ nhưng mình luôn tin rằng những sản phẩm tốt được tạo nên từ sự tò mò và tinh thần học hỏi không ngừng.",
+      "Trong quá trình học tập và làm việc với các dự án thực tế, mình đã có cơ hội phát triển API RESTful bằng ASP.NET và xây dựng giao diện bằng ReactJS. Điều khiến mình hứng thú nhất là việc biến những ý tưởng thành sản phẩm có thể hoạt động ổn định và mang lại giá trị cho người dùng.",
+      "Dần dần, mình nhận ra bản thân bị thu hút nhiều hơn bởi:",
+      "“Xây dựng, Tối ưu, Phát triển”",
+      "Xây dựng các hệ thống backend ổn định. \n Tối ưu trải nghiệm và hiệu năng ứng dụng \n Phát triển bản thân mỗi ngày thông qua những thử thách mới.",
+      "Bên cạnh đó, niềm yêu thích hội họa giúp mình có thêm góc nhìn về UI/UX, từ đó cân bằng giữa tính kỹ thuật và trải nghiệm người dùng.",
+      "Mỗi dự án với mình là một cơ hội để học hỏi, cải thiện và tạo ra phiên bản tốt hơn của chính mình."
+    ],
+    
     "education": {
       "title": "Học Vấn",
       "school": "Đại học Công nghệ Sài Gòn (STU)",
