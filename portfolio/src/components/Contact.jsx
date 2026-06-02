@@ -76,26 +76,26 @@ const Contact = () => {
     <section id="contact" className="py-24 relative overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300">
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-slate-800 dark:text-white">{t('contact.title')}</h2>
-          <p className="text-slate-600 dark:text-slate-300">{t('contact.subtitle')}</p>
+          <h2 className="text-4xl font-bold mb-4 text-slate-800 duration-300 dark:text-white">{t('contact.title')}</h2>
+          <p className="text-slate-600 duration-300 dark:text-slate-300">{t('contact.subtitle')}</p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* CỘT TRÁI: INFO */}
           <div className="lg:col-span-2 space-y-6 ">
             {contactInfo.map((info, index) => (
-              <div key={index} className="group p-5 rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/5">
+              <div key={index} className="group p-5 rounded-3xl border border-slate-300 dark:border-slate-800 bg-slate-50/50 duration-300 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/5">
                 <div className="flex items-center gap-5" >
                   <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 transition-colors duration-300 group-hover:scale-110">
                     {info.icon}
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase text-slate-400 mb-0.5">{info.label}</p>
-                    <p className="text-slate-800 dark:text-slate-200 font-medium break-all">{info.value}</p>
+                    <p className="text-slate-800 duration-300 dark:text-slate-200 font-medium break-all">{info.value}</p>
                   </div>
                 </div>
                 {info.canCopy && (
-                  <button onClick={() => copyToClipboard(info.value)} className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 text-slate-400">
+                  <button onClick={() => copyToClipboard(info.value)} className="p-2.5 rounded-xl bg-slate-50 duration-300 dark:bg-slate-800/50 text-slate-400">
                     {copied === info.value ? <Check size={18} className="text-emerald-500" /> : <Copy size={18} />}
                   </button>
                 )}
@@ -103,10 +103,10 @@ const Contact = () => {
             ))}
 
             <div className="pt-7 text-center lg:text-left">
-              <p className="text-xl font-medium opacity-80 mb-6 tracking-widest dark:text-white">{t('contact.connect')}</p>
+              <p className="text-xl font-medium opacity-80 mb-6 tracking-widest duration-300 dark:text-white">{t('contact.connect')}</p>
               <div className="flex justify-center lg:justify-start gap-4">
                 {socialLinks.map((social, index) => (
-                  <a key={index} href={social.link} target="_blank" className="w-12 h-12 border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50  rounded-2xl flex items-center justify-center  transition-all dark:text-white text-slate-800 hover:scale-110">
+                  <a key={index} href={social.link} target="_blank" className="w-12 h-12 border border-slate-300 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50  rounded-2xl flex items-center justify-center  transition-all duration-300 dark:text-white text-slate-800 hover:scale-110">
                     {social.icon}
                   </a>
                 ))}
@@ -115,7 +115,7 @@ const Contact = () => {
           </div>
 
           {/* CỘT PHẢI: FORM */}
-          <motion.div className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-200 dark:border-slate-800">
+          <motion.div className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-300 transition-colors duration-300 dark:border-slate-800">
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
               <div className="md:col-span-1">
                 <label className="block text-sm font-semibold text-slate-500 mb-2">{t('contact.form.name')}</label>
@@ -125,7 +125,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   type="text" 
-                  className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 transition-all outline-none"
+                  className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-300 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500  transition-all duration-300 outline-none"
                   placeholder="Tran Van A"
                 />
               </div>
@@ -138,7 +138,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   type="email" 
-                  className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 transition-all outline-none"
+                  className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-300 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 transition-all duration-300 outline-none"
                   placeholder="example@mail.com"
                 />
               </div>
@@ -151,7 +151,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="5" 
-                  className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 outline-none resize-none"
+                  className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-300 transition-colors duration-300 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 outline-none resize-none"
                   placeholder={t('contact.form.placeholder_message')}
                 ></textarea>
               </div>

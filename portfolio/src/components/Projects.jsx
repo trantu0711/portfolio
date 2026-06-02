@@ -43,10 +43,10 @@ const Projects = () => {
       <div className="container mx-auto px-6 w-[85%]">
         {/* Tiêu đề */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-slate-800 dark:text-white">
+          <h2 className="text-4xl font-bold mb-4 text-slate-800 transition-colors duration-300 dark:text-white">
             {t('projects.title')}
           </h2>
-          <p className="text-slate-600 dark:text-slate-300">
+          <p className="text-slate-600 dark:text-slate-300 transition-colors duration-300">
             {t('projects.subtitle')}
           </p>
         </div>
@@ -57,7 +57,7 @@ const Projects = () => {
             <motion.div 
               key={project.id}
               whileHover={{ y: -10 }}
-              className="dark:bg-[#12122a] bg-slate-50 rounded-[1.5rem] p-5 border dark:border-slate-700/50 shadow-2xl flex flex-col"
+              className="dark:bg-[#12122a] bg-slate-50 rounded-[1.5rem] p-5 duration-300 dark:border-slate-700/50 border border-slate-300 flex flex-col"
             >
               {/* Ảnh dự án */}
               <div className="rounded-[1rem] overflow-hidden mb-6 aspect-video">
@@ -69,7 +69,7 @@ const Projects = () => {
               </div>
 
               {/* Nội dung */}
-              <h3 className="text-2xl font-bold mb-2 text-slate-800 dark:text-white ">
+              <h3 className="text-2xl font-bold mb-2 text-slate-800 duration-300 dark:text-white ">
                 {t(`projects.items.${project.id}.title`)}
               </h3>
               
@@ -81,7 +81,7 @@ const Projects = () => {
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-8">
                 {project.tags.map((tag, tIndex) => (
-                  <span key={tIndex} className="px-4 py-1.5 dark:bg-slate-800/80 bg-slate-50 dark:text-slate-300 text-slate-800 rounded-full text-xs font-medium border border-slate-700">
+                  <span key={tIndex} className="px-4 py-1.5 dark:bg-slate-800/80 bg-slate-50 duration-300 dark:text-slate-300 text-slate-800 rounded-full text-xs font-medium border border-slate-700">
                     {tag}
                   </span>
                 ))}

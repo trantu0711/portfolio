@@ -39,7 +39,7 @@ const Hero = () => {
               />
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 leading-[1.1]">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white transition-colors duration-300 mb-6 leading-[1.1]">
               {t('hero.greeting')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
                 {t('hero.name')}
@@ -62,7 +62,7 @@ const Hero = () => {
                 href="/CV_Tran Minh Tu_Fullstack Developer Intern.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-8 py-4 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-white rounded-2xl font-semibold shadow-md border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all"
+                className="flex items-center gap-2 px-8 py-4 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-white rounded-2xl font-semibold shadow-md border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-300"
               >
                 <FileText size={20} className="text-orange-500" />
                 {t('hero.buttons.cv')}
@@ -89,10 +89,10 @@ const Hero = () => {
 
               {/* Vòng tròn hiệu ứng phía sau */}
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-pink-500/20 rounded-3xl rotate-6 animate-pulse" />
-              <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-indigo-500/10 rounded-3xl -rotate-3 border border-slate-200 dark:border-slate-800" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-indigo-500/10 rounded-3xl -rotate-3 border border-slate-200 dark:border-slate-800 duration-300" />
 
               {/* Khung ảnh chính */}
-              <div className="absolute inset-4 bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl ">
+              <div className="absolute inset-4 bg-slate-200 dark:bg-slate-800 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl duration-300 ">
                 <img
                   alt="Avatar"
                   className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 hover:scale-105 transition-all duration-700"
@@ -104,13 +104,13 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -bottom-6 -left-6 bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700"
+                className="absolute -bottom-6 -left-6 bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 duration-300"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center text-green-500 font-bold text-2xl">👨‍💻</div>
                   <div>
                     {/* <p className="text-[10px] text-slate-500 uppercase tracking-tighter">Học vấn</p> */}
-                    <p className="text-sm font-bold dark:text-white text-slate-800">{t('hero.badge')}</p>
+                    <p className="text-sm font-bold dark:text-white text-slate-800 duration-300">{t('hero.badge')}</p>
                   </div>
 
                 </div>

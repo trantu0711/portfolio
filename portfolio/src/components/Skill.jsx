@@ -49,10 +49,10 @@ const Skills = () => {
       <div className="container mx-auto px-6 relative z-10 lg:w-[85%]">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 duration-300 dark:text-white tracking-tight">
             {t('skills.title')}
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400">
+          <p className="max-w-2xl mx-auto text-lg text-slate-600 duration-300 dark:text-slate-400">
             {t('skills.subtitle')}
           </p>
         </div>
@@ -66,24 +66,24 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
-              className={`group relative overflow-hidden p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50 backdrop-blur-xl transition-all duration-300 ${group.span} ${group.borderColor}`}
+              className={`group relative overflow-hidden p-8 rounded-[2rem] border border-slate-300 dark:border-slate-800 bg-slate-50/50 dark:bg-[#12122a]/50 backdrop-blur-xl transition-all duration-300 ${group.span} ${group.borderColor}`}
             >
               {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${group.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800 shadow-lg transition-all duration-300 group-hover:scale-110">
                     {group.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-800 dark:text-white">{group.title}</h3>
+                  <h3 className="text-2xl font-bold text-slate-800 duration-300 dark:text-white">{group.title}</h3>
                 </div>
 
                 <div className="flex flex-wrap gap-3">
                   {group.skills.map((skill, sIndex) => (
                     <span
                       key={sIndex}
-                      className="px-5 py-2.5 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition-colors shadow-sm"
+                      className="px-5 py-2.5 rounded-2xl bg-slate-50 duration-300 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700/50 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition-colors shadow-sm"
                     >
                       {skill}
                     </span>
