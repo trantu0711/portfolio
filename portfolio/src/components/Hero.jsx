@@ -25,7 +25,8 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {/* Tag định danh với hiệu ứng xóa và viết lại */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold text-sm mb-6 border border-blue-100 dark:border-blue-800 min-w-[250px]">
+            
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold text-sm mb-6 border border-blue-100 dark:border-blue-800 min-w-[250px] ">
               <Sparkles size={16} className="animate-pulse" />
 
               <Typewriter
