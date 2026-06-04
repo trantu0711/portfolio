@@ -55,6 +55,7 @@
         "Improved UX and optimized responsive design."
       ]
     },
+
     "interests": {
       "title": "Activities & Interests",
       "activities_label": "Activities",
@@ -85,7 +86,7 @@
       "phone": "Phone",
       "address": {
         "line1": "Address",
-        "line2": "District 8, Ho Chi Minh City"
+        "line2": "Ho Chi Minh, Viet Nam"
       }
     },
     "messages": "Something went wrong. Please try again!",
