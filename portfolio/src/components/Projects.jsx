@@ -39,7 +39,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 text-white bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300">
-     
+
       <div className="container mx-auto px-6 w-[85%]">
         {/* Tiêu đề */}
         <div className="text-center mb-16">
@@ -54,16 +54,19 @@ const Projects = () => {
         {/* Danh sách Card dự án */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projectList.map((project) => (
-            <motion.div 
+            <motion.div
               key={project.id}
-              whileHover={{ y: -10 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: project.id * 0.1 }}
+              whileHover={{ scale: 1.02 }}
               className="dark:bg-[#12122a] bg-slate-50 rounded-[1.5rem] p-5 duration-300 dark:border-slate-700/50 border border-slate-300 flex flex-col"
             >
               {/* Ảnh dự án */}
               <div className="rounded-[1rem] overflow-hidden mb-6 aspect-video">
-                <img 
-                  src={project.image} 
-                  alt={t(`projects.items.${project.id}.title`)} 
+                <img
+                  src={project.image}
+                  alt={t(`projects.items.${project.id}.title`)}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -72,7 +75,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold mb-2 text-slate-800 duration-300 dark:text-white ">
                 {t(`projects.items.${project.id}.title`)}
               </h3>
-              
+
               {/* Kiểm tra nếu có description thì mới hiển thị */}
               <p className="text-slate-400 text-sm mb-6 text-justify line-clamp-3">
                 {t(`projects.items.${project.id}.desc`)}
@@ -90,7 +93,7 @@ const Projects = () => {
               {/* Nút bấm (Tự động đẩy xuống dưới cùng) */}
               <div className="mt-auto flex gap-4">
                 {project.github && (
-                  <a 
+                  <a
                     href={project.github}
                     target="_blank"
                     className="flex-1 bg-slate-50 text-slate-900 py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-200 transition-colors border border-slate-700"
@@ -99,7 +102,7 @@ const Projects = () => {
                   </a>
                 )}
                 {project.demo && (
-                  <a 
+                  <a
                     href={project.demo}
                     target="_blank"
                     className="flex-1 bg-slate-800 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-600 transition-colors"

@@ -8,7 +8,7 @@ import axios from 'axios'; // Import axios
 const Contact = () => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState("");
-  
+
   // Trạng thái Form
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState({ loading: false, success: false, error: false });
@@ -32,7 +32,7 @@ const Contact = () => {
     try {
       // Gọi API Backend
       const response = await axios.post('https://portfolio-js4r.onrender.com/api/contact', formData);
-      
+
       if (response.data.success) {
         setStatus({ loading: false, success: true, error: false });
         setFormData({ name: '', email: '', message: '' }); // Reset form
@@ -80,9 +80,16 @@ const Contact = () => {
           <p className="text-slate-600 duration-300 dark:text-slate-300">{t('contact.subtitle')}</p>
         </div>
 
+
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* CỘT TRÁI: INFO */}
-          <div className="lg:col-span-2 space-y-6 ">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }} // Kích hoạt khi cuộn đến
+            transition={{ duration: 1 }}
+            className="lg:col-span-2 space-y-6 ">
+
             {contactInfo.map((info, index) => (
               <div key={index} className="group p-5 rounded-3xl border border-slate-300 dark:border-slate-800 bg-slate-50/50 duration-300 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/5">
                 <div className="flex items-center gap-5" >
@@ -112,19 +119,25 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-          </div>
+
+          </motion.div>
 
           {/* CỘT PHẢI: FORM */}
-          <motion.div className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-300 transition-colors duration-300 dark:border-slate-800">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="space-y-10"
+            className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-300 transition-colors duration-300 dark:border-slate-800">
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
               <div className="md:col-span-1">
                 <label className="block text-sm font-semibold text-slate-500 mb-2">{t('contact.form.name')}</label>
-                <input 
+                <input
                   required
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  type="text" 
+                  type="text"
                   className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-300 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500  transition-all duration-300 outline-none"
                   placeholder="Tran Van A"
                 />
@@ -132,12 +145,12 @@ const Contact = () => {
 
               <div className="md:col-span-1">
                 <label className="block text-sm font-semibold text-slate-500 mb-2">{t('contact.form.email')}</label>
-                <input 
+                <input
                   required
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  type="email" 
+                  type="email"
                   className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-300 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 transition-all duration-300 outline-none"
                   placeholder="example@mail.com"
                 />
@@ -145,19 +158,19 @@ const Contact = () => {
 
               <div className="md:col-span-2">
                 <label className="block text-sm font-semibold text-slate-500 mb-2">{t('contact.form.message')}</label>
-                <textarea 
+                <textarea
                   required
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="5" 
+                  rows="5"
                   className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-300 transition-colors duration-300 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 outline-none resize-none"
                   placeholder={t('contact.form.placeholder_message')}
                 ></textarea>
               </div>
 
               <div className="md:col-span-2">
-                <button 
+                <button
                   disabled={status.loading}
                   type="submit"
                   className={`w-full py-5 text-white font-bold rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl ${status.success ? 'bg-emerald-500' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-600/25'}`}
@@ -167,7 +180,7 @@ const Contact = () => {
                     {status.loading ? t('contact.social.loading') : status.success ? t('contact.social.success') : t('contact.form.send')}
                   </span>
                 </button>
-                
+
                 {status.error && <p className="text-red-500 text-sm mt-2 text-center">{t('contact.messages')}</p>}
               </div>
             </form>
