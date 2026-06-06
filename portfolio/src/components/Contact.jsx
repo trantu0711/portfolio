@@ -86,7 +86,6 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }} // Kích hoạt khi cuộn đến
             transition={{ duration: 1 }}
             className="lg:col-span-2 space-y-6 ">
 
@@ -127,6 +126,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
+            
             className="space-y-10"
             className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-300 transition-colors duration-300 dark:border-slate-800">
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
