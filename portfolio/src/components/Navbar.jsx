@@ -9,7 +9,7 @@ const Navbar = () => {
 
   // Hiệu ứng đổi màu Navbar khi cuộn chuột
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -50,7 +50,7 @@ const Navbar = () => {
   // hàm đổi icon cờ dựa trên ngôn ngữ hiện tại
   const renderFlag = () => {
     if (i18n.language === 'vi') {
-      // Dán cụm <svg> cờ nước Anh thuần React của Tú vào đây
+
       return (
         <svg width={30} height={20} viewBox="0 0 30 20" fill="none">
           <rect width={30} height={20} fill="#F5F5F5" />
@@ -96,10 +96,14 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-50/80 dark:bg-[#0b0b17]/80 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="w-full mx-auto px-6 flex justify-between items-center">
-        
+
         {/* Logo */}
-        <div className="text-2xl font-black text-blue-600 dark:text-blue-400 md:pl-10 tracking-tighter">
-          Minh Tu.portfolio
+        <div className="text-lg md:text-2xl font-black text-blue-600 dark:text-blue-400 md:pl-10 tracking-tighter">
+          {/* Chữ hiển thị trên Mobile (Màn hình nhỏ hơn md thì hiện, to hơn thì ẩn) */}
+          <span className="inline md:hidden">MT.portfolio</span>
+
+          {/* Chữ hiển thị trên Desktop (Mặc định ẩn, từ màn hình md trở lên mới hiện) */}
+          <span className="hidden md:inline">Minh Tu.portfolio</span>
         </div>
 
         {/* Menu Links */}
@@ -113,9 +117,9 @@ const Navbar = () => {
 
         {/* Action Buttons (Language & Dark Mode) */}
         <div className="flex items-center gap-3 md:pr-10">
-          
+
           {/* Nút chuyển đổi ngôn ngữ theo yêu cầu hình ảnh */}
-          <button 
+          <button
             onClick={toggleLanguage}
             className="flex items-center gap-2 px-3 py-2 rounded-full bg-blue-50/50 dark:bg-slate-800/50 text-blue-500 hover:bg-blue-100 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm"
           >
@@ -127,8 +131,8 @@ const Navbar = () => {
           </button>
 
           {/* Nút Dark Mode hình tròn tối giản */}
-          <button 
-            onClick={toggleDark} 
+          <button
+            onClick={toggleDark}
             className="p-2.5 rounded-full bg-blue-50/50 dark:bg-slate-800/50 text-blue-500 hover:bg-blue-100 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm"
           >
             {dark ? (
