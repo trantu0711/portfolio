@@ -63,7 +63,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="/CV_Tran Minh Tu_Fullstack Developer Intern.pdf"
+                href="/TRAN_MINH_TU_SOFTWARE_ENGINEER_INTERN_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-white rounded-2xl font-semibold shadow-sm border border-slate-200/60 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300"
