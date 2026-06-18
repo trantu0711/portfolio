@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="dark:bg-[#0b0b17] bg-slate-50 py-12 border-slate-800/50 transition-colors duration-300">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 text-center ">
         {/* Lời gọi hợp tác */}
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800 duration-300 dark:text-white">
          {t('footer.cta')}
