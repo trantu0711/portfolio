@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-fit xl:min-h-screen md:max-h-[650px] lg:max-h-none flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300 py-16 md:py-24 xl:py-0"
+      className="relative min-h-fit xl:min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300 py-20 xl:py-0"
     >
       {/* NỀN TRANG TRÍ (Decor Elements) */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
