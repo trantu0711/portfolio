@@ -8,18 +8,16 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section 
-      id="home" 
-      className="relative min-h-fit xl:min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300 py-20 xl:py-0"
-    >
+    <section id="home" className="relative xl:min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300 py-12 lg:py-20">
+
       {/* NỀN TRANG TRÍ (Decor Elements) */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] md:w-[40%] h-[40%] bg-blue-400/20 rounded-full blur-[80px] md:blur-[120px] dark:bg-blue-600/10" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] md:w-[40%] h-[40%] bg-pink-400/20 rounded-full blur-[80px] md:blur-[120px] dark:bg-pink-600/10" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-[95%] w-full md:my-auto">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-8 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-[95%] w-full">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
           {/* CỘT 1: NỘI DUNG VĂN BẢN (Chiếm 7 cột trên màn hình lớn) */}
           <motion.div
@@ -45,7 +43,7 @@ const Hero = () => {
             </div>
 
             {/* Tiêu đề chính */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white transition-colors duration-300 mb-6 leading-[1.15] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-extrabold text-slate-900 dark:text-white transition-colors duration-300 mb-6 leading-[1.15] tracking-tight">
               {t('hero.greeting')} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
                 {t('hero.name')} 
