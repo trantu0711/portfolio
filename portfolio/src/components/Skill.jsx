@@ -31,7 +31,7 @@ const Skills = () => {
       span: "md:col-span-1"
     },
     {
-      title: "Soft Skills", // Tiêu đề dự phòng nếu i18n chưa load
+      title: t('skills.soft_skills_title'),
       icon: <Star className="text-purple-400" size={28} />,
       skills: t('skills.soft_skills_list', { returnObjects: true }) || [],
       color: "from-purple-500/20 to-pink-500/5",

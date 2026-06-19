@@ -27,7 +27,7 @@ const Hero = () => {
             className="lg:col-span-7 order-2 lg:order-1 text-center lg:text-left transform-gpu will-change-transform"
           >
             {/* Tag định danh với hiệu ứng viết chữ */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold text-xs md:text-sm mb-6 border border-blue-100 dark:border-blue-800 max-w-full">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold text-xs md:text-sm mb-6 border border-blue-100 dark:border-blue-800 max-w-full transition-colors duration-300">
               <Sparkles size={14} className="animate-pulse shrink-0" />
               <div className="font-semibold tracking-wide">
                 <Typewriter
