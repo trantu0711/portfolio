@@ -27,35 +27,60 @@ const About = () => {
           <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2 duration-300">
             <span className="w-8 h-1 bg-blue-500 rounded-full"></span>
             {t('about.intro_title')}
-            
           </h3>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
-            {t('about.intro_description.0')}
-          </p>
-          <br/>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
-            {t('about.intro_description.1')}
-          </p>
-          <br/>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
-            {t('about.intro_description.2')}
-          </p>
-          <br/>
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 leading-relaxed text-center text-lg md:text-xl max-w-6xl">
-            {t('about.intro_description.3')}
-          </p>
-          <br/>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-center text-lg md:text-xl max-w-6xl whitespace-pre-line">
-            {t('about.intro_description.4')}
-          </p>
-          <br/>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
+          {/* Thuộc tính dangerouslySetInnerHTML trong React dùng để render HTML trực tiếp. lưu ý khá nguy hiểm dễ bị tấ n công xss */}
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.0') }}
+          />
+          <br />
+
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.1') }}
+          />
+          <br />
+
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.2') }}
+          />
+          <br />
+
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.3') }}
+          />
+          <br />
+
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.4') }}
+          />
+          <br />
+
+         
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 leading-relaxed text-center text-lg md:text-xl max-w-6xl font-bold">
             {t('about.intro_description.5')}
           </p>
-          <br/>
-          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl">
-            {t('about.intro_description.6')}
-          </p>
+          <br />
+
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-center text-lg md:text-xl max-w-6xl whitespace-pre-line"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.6') }}
+          />
+          <br />
+
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.7') }}
+          />
+          <br />
+
+          <p
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            dangerouslySetInnerHTML={{ __html: t('about.intro_description.8') }}
+          />
 
         </motion.div>
 

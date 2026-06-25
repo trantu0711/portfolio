@@ -24,20 +24,20 @@
       "connect": "Kết nối:"
     }
   },
-
   "about": {
     "section_title": "Về Bản Thân",
     "intro_title": "Xin chào, mình là Trần Minh Tú ✌️",
     "intro_description": [
-      "Là một “newbie” trong ngành công nghệ nhưng mình luôn tin rằng những sản phẩm tốt được tạo nên từ sự tò mò và tinh thần học hỏi không ngừng.",
-      "Trong quá trình học tập và làm việc với các dự án thực tế, mình đã có cơ hội phát triển API RESTful bằng ASP.NET và xây dựng giao diện bằng ReactJS. Điều khiến mình hứng thú nhất là việc biến những ý tưởng thành sản phẩm có thể hoạt động ổn định và mang lại giá trị cho người dùng.",
+      "Là một “newbie” trong ngành công nghệ nhưng mình luôn tin rằng những sản phẩm tốt được tạo nên từ sự tò mò và <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>tinh thần học hỏi không ngừng</span>.",
+      "Đúng là hiện tại mình chưa có nhiều kinh nghiệm trong lĩnh vực này, nhưng mình tin rằng ai cũng cần một cơ hội để bắt đầu. Điều mình chưa có kinh nghiệm, mình sẽ bù đắp lại bằng <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>tinh thần học hỏi, sự chủ động</span> và <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>thái độ nghiêm túc</span> với công việc.",
+      "Và nếu được trao cơ hội, mình sẽ <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>cố gắng hết sức mình</span> để chứng minh rằng mình xứng đáng với vị trí này.",
+      "Trong quá trình học tập và làm việc với các dự án thực tế, mình đã có cơ hội phát triển <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>API RESTful bằng ASP.NET</span> và xây dựng giao diện bằng <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>ReactJS</span>. Điều khiến mình hứng thú nhất là việc biến những ý tưởng thành sản phẩm có thể hoạt động ổn định và mang lại giá trị cho người dùng.",
       "Dần dần, mình nhận ra bản thân bị thu hút nhiều hơn bởi:",
       "“Xây dựng, Tối ưu, Phát triển”",
       "Xây dựng các hệ thống backend ổn định. \n Tối ưu trải nghiệm và hiệu năng ứng dụng \n Phát triển bản thân mỗi ngày thông qua những thử thách mới.",
-      "Bên cạnh đó, niềm yêu thích hội họa giúp mình có thêm góc nhìn về UI/UX, từ đó cân bằng giữa tính kỹ thuật và trải nghiệm người dùng.",
+      "Bên cạnh đó, niềm yêu thích hội họa giúp mình có thêm góc nhìn về <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>UI/UX</span>, từ đó cân bằng giữa tính kỹ thuật và trải nghiệm người dùng.",
       "Mỗi dự án với mình là một cơ hội để học hỏi, cải thiện và tạo ra phiên bản tốt hơn của chính mình."
     ],
-    
     "education": {
       "title": "Học Vấn",
       "school": "Đại học Công nghệ Sài Gòn (STU)",
@@ -96,13 +96,11 @@
       "success": "Gửi thành công!"
     }
   },
-
   "footer": {
     "cta": "Hãy cùng hợp tác!",
     "quote": "Một bông hoa đẹp cần ít thời gian để nở nhưng chỉ có thể khoe sắc ngắn ngủi rồi tàn phai. Nhưng trồng cây thì khác, có thể mất vài năm để có quả ngọt đầu tiên nhưng lại đều đặn kết trái hằng năm. Theo đuổi sự nghiệp cũng vậy, có những thành công như loài hoa kia sớm nở tối tàn, lại có vinh quang như vun trồng một cái cây - phải đánh đổi nhiều năm, dầm mưa dãi nắng, đổ bao công sức để bộ rễ vững vàng chôn sâu dưới lòng đất, cành lá vươn mình và kết thành trái ngọt.",
     "copy": "© {{year}} Minh Tú. Xây dựng bằng ReactJS & Tailwind CSS."
   },
-
   "skills": {
     "title": "Kỹ Năng Chuyên Môn",
     "subtitle": "Bộ công cụ mình sử dụng để xây dựng sản phẩm",
@@ -119,12 +117,11 @@
       "tools": "Công cụ & Khác"
     }
   },
-
   "projects": {
     "title": "Dự Án Nổi Bật",
     "subtitle": "Những sản phẩm thực tế mình đã xây dựng",
     "items": {
-      "portfolio": { 
+      "portfolio": {
         "title": "Portfolio Cá Nhân",
         "desc": "Trang web cá nhân giới thiệu kỹ năng và dự án, tích hợp đa ngôn ngữ và chế độ tối."
       },
@@ -142,5 +139,4 @@
       }
     }
   }
-
 }

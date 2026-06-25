@@ -28,12 +28,14 @@
     "section_title": "About Me",
     "intro_title": "Hi there, I am Tran Minh Tu ✌️",
     "intro_description": [
-      "As a “newbie” in the tech industry, I firmly believe that exceptional products are driven by relentless curiosity and a continuous learning mindset.",
-      "Through academic and hands-on projects, I have developed a strong foundation in building RESTful APIs with ASP.NET Core and crafting responsive user interfaces using ReactJS. What excites me most is turning conceptual ideas into robust, production-ready applications that deliver real value to users.",
+      "As a “newbie” in the tech industry, I firmly believe that exceptional products are driven by relentless curiosity and a <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>continuous learning mindset</span>.",
+      "It is true that I do not have much experience in this field yet, but I believe that everyone needs an opportunity to start. What I lack in experience, I will make up for with a <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>learning spirit, proactivity</span>, and a <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>serious attitude</span> toward my work.",
+      "And if given the chance, I will <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>do my absolute best</span> to prove that I am worthy of this position.",
+      "Through academic and hands-on projects, I have developed a strong foundation in building <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>RESTful APIs with ASP.NET Core</span> and crafting responsive user interfaces using <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>ReactJS</span>. What excites me most is turning conceptual ideas into robust, production-ready applications that deliver real value to users.",
       "Over time, I found myself becoming more drawn to:",
       "“Build, Optimize, Grow”",
-      "Building stable, secure, and scalable backend systems.\nOptimizing user experience (UI/UX) alongside application performance.\nGrowing my technical expertise through every project and new challenge.",
-      "Additionally, my passion for arts gives me a unique perspective on UI/UX, allowing me to strike a balance between technical implementation and intuitive user experience.",
+      "Building stable, secure, and scalable backend systems.\n Optimizing user experience (UI/UX) alongside application performance.\n Growing my technical expertise through every project and new challenge.",
+      "Additionally, my passion for arts gives me a unique perspective on <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 font-bold'>UI/UX</span>, allowing me to strike a balance between technical implementation and intuitive user experience.",
       "Every project is an opportunity for me to learn, improve, and deploy a better version of myself."
     ],
     "education": {
@@ -55,7 +57,6 @@
         "Improved UX and optimized responsive design."
       ]
     },
-
     "interests": {
       "title": "Activities & Interests",
       "activities_label": "Activities",
