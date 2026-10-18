@@ -40,7 +40,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 text-white bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300">
 
-      <div className="container mx-auto px-6 w-[85%]">
+      <div className="container mx-auto px-6 lg:w-[80%]">
         {/* Tiêu đề */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-slate-800 transition-colors duration-300 dark:text-white">

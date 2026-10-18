@@ -30,55 +30,55 @@ const About = () => {
           </h3>
           {/* Thuộc tính dangerouslySetInnerHTML trong React dùng để render HTML trực tiếp. lưu ý khá nguy hiểm dễ bị tấ n công xss */}
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.0') }}
           />
           <br />
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.1') }}
           />
           <br />
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.2') }}
           />
           <br />
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.3') }}
           />
           <br />
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.4') }}
           />
           <br />
 
          
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 leading-relaxed text-center text-lg md:text-xl max-w-6xl font-bold">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 leading-relaxed text-center text-lg md:text-xl font-bold">
             {t('about.intro_description.5')}
           </p>
           <br />
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-center text-lg md:text-xl max-w-6xl whitespace-pre-line"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-center text-lg md:text-xl whitespace-pre-line"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.6') }}
           />
           <br />
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.7') }}
           />
           <br />
 
           <p
-            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl max-w-6xl"
+            className="text-slate-600 dark:text-slate-300 leading-relaxed text-justify text-lg md:text-xl"
             dangerouslySetInnerHTML={{ __html: t('about.intro_description.8') }}
           />
 

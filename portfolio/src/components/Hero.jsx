@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="relative xl:min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300 py-12 lg:py-20">
+    <section id="home" className="relative xl:min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300 py-12 lg:py-20 ">
 
       {/* NỀN TRANG TRÍ (Decor Elements) */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
@@ -101,7 +101,7 @@ const Hero = () => {
                 <img
                   alt="Avatar Trần Minh Tú"
                   className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 hover:scale-105 transition-all duration-700"
-                  src="/avatar.png"
+                  src="/avatar.png" fetchpriority="high"
                 />
               </div>
 

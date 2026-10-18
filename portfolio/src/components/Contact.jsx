@@ -74,7 +74,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300">
-      <div className="container mx-auto px-6 relative z-10 max-w-6xl">
+      <div className="container mx-auto px-6 relative z-10 w-full lg:w-[80%]">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-slate-800 duration-300 dark:text-white">{t('contact.title')}</h2>
           <p className="text-slate-600 duration-300 dark:text-slate-300">{t('contact.subtitle')}</p>
@@ -127,7 +127,6 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             
-            className="space-y-10"
             className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-300 transition-colors duration-300 dark:border-slate-800">
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
               <div className="md:col-span-1">
