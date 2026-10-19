@@ -101,7 +101,7 @@ const Hero = () => {
                 <img
                   alt="Avatar Trần Minh Tú"
                   className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 hover:scale-105 transition-all duration-700"
-                  src="/avatar.png" fetchpriority="high"
+                  src="/avatar.webp" fetchPriority="high"
                 />
               </div>
 

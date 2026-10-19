@@ -9,28 +9,28 @@ const Projects = () => {
   const projectList = [
     {
       id: "portfolio",
-      image: "index_portfolio.png",
+      image: "index_portfolio.webp",
       tags: ["ReactJS", "Tailwind", "i18n", "NodeJS"],
       github: "https://github.com/trantu0711/portfolio",
       demo: null
     },
     {
       id: "room_rental",
-      image: "index.png",
+      image: "index_room.webp",
       tags: ["ReactJS", "C# (ASP.NET)", "SQL Server", "VNPay"],
       github: "https://github.com/trantu0711/Room-Rental-Search-and-Management-Web-Application",
       demo: null
     },
     {
       id: "vinherb",
-      image: "index_vinherb.png",
+      image: "index_vinherb.webp",
       tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5"],
       github: "https://github.com/trantu0711/Vinherb-Skincare-Product-Website/",
       demo: "https://trantu0711.github.io/Vinherb-Skincare-Product-Website/"
     },
     {
       id: "figma_design",
-      image: "index_figma.png",
+      image: "index_figma.webp",
       tags: ["Figma"],
       github: null,
       demo: "https://www.figma.com/design/6B2V42mLHBucFGiapCwmCt/Bai-Tap-Web?node-id=0-1"
