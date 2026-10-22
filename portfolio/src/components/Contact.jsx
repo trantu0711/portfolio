@@ -77,7 +77,7 @@ const Contact = () => {
       <div className="container mx-auto px-6 relative z-10 w-full lg:w-[80%]">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-slate-800 duration-300 dark:text-white">{t('contact.title')}</h2>
-          <p className="text-slate-600 duration-300 dark:text-slate-300">{t('contact.subtitle')}</p>
+          <p className="max-w-2xl mx-auto text-lg text-slate-600 duration-300 dark:text-slate-400">{t('contact.subtitle')}</p>
         </div>
 
 
@@ -90,7 +90,7 @@ const Contact = () => {
             className="lg:col-span-2 space-y-6 ">
 
             {contactInfo.map((info, index) => (
-              <div key={index} className="group p-5 rounded-3xl border border-slate-300 dark:border-slate-800 bg-slate-50/50 duration-300 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/5">
+              <div key={index} className="group p-5 rounded-3xl border border-slate-300 dark:border-slate-800 bg-slate-50/50 duration-300 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/10">
                 <div className="flex items-center gap-5" >
                   <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 transition-colors duration-300 group-hover:scale-110">
                     {info.icon}
@@ -127,7 +127,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             
-            className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-300 transition-colors duration-300 dark:border-slate-800">
+            className="lg:col-span-3 p-8 md:p-10 rounded-[1.5rem] bg-slate-50 dark:bg-[#12122a] border border-slate-300 transition-colors duration-300 dark:border-slate-800 hover:shadow-xl hover:shadow-blue-500/10 ">
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
               <div className="md:col-span-1">
                 <label className="block text-sm font-semibold text-slate-500 mb-2">{t('contact.form.name')}</label>

@@ -46,7 +46,7 @@ const Projects = () => {
           <h2 className="text-4xl font-bold mb-4 text-slate-800 transition-colors duration-300 dark:text-white">
             {t('projects.title')}
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 transition-colors duration-300">
+          <p className="max-w-2xl mx-auto text-lg text-slate-600 duration-300 dark:text-slate-400">
             {t('projects.subtitle')}
           </p>
         </div>
@@ -60,14 +60,14 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: project.id * 0.1 }}
               whileHover={{ scale: 1.02 }}
-              className="dark:bg-[#12122a] bg-slate-50 rounded-[1.5rem] p-5 duration-300 dark:border-slate-700/50 border border-slate-300 flex flex-col"
+              className="dark:bg-[#12122a] bg-slate-50 rounded-[1.5rem] p-5 duration-300 dark:border-slate-700/50 border border-slate-300 flex flex-col hover:shadow-[0_0_50px_var(--tw-shadow-color)] hover:shadow-blue-500/20"
             >
               {/* Ảnh dự án */}
               <div className="rounded-[1rem] overflow-hidden mb-6 aspect-video">
                 <img
                   src={project.image}
                   alt={t(`projects.items.${project.id}.title`)}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500"  
                 />
               </div>
 

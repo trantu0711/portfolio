@@ -49,7 +49,7 @@ const Skills = () => {
       <div className="container mx-auto px-6 relative z-10 w-full lg:w-[80%]">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 duration-300 dark:text-white tracking-tight">
+          <h2 className="text-4xl font-extrabold mb-6 text-slate-900 duration-300 dark:text-white tracking-tight">
             {t('skills.title')}
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-slate-600 duration-300 dark:text-slate-400">
