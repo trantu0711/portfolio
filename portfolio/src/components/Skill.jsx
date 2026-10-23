@@ -25,7 +25,7 @@ const Skills = () => {
     {
       title: t('skills.groups.tools'),
       icon: <Terminal className="text-orange-400" size={28} />,
-      skills: ["Git/GitHub", "Postman", "Figma", "VS Code"],
+      skills: ["Git/GitHub", "Wordpress", "Postman", "Figma", "VS Code"],
       color: "from-orange-500/20 to-yellow-500/5",
       borderColor: "group-hover:border-orange-500/50",
       span: "md:col-span-1"
