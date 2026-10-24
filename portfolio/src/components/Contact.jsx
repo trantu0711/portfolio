@@ -5,11 +5,26 @@ import { Tiktok, Facebook, Github, Linkedin } from '@boxicons/react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 
+const Contact = () => {
+  const { t } = useTranslation();
+  const [copied, setCopied] = useState("");
+  
+  // Trạng thái theo dõi ẩn/hiện cho từng dòng (theo index)
+  const [revealedItems, setRevealedItems] = useState({});
 
-const RevealContactItem = ({ info, copied, onCopy }) => {
-  const [isRevealed, setIsRevealed] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState({ loading: false, success: false, error: false });
 
-  const getMaskedValue = () => {
+  // Hàm xử lý đổi trạng thái ẩn/hiện
+  const toggleReveal = (index) => {
+    setRevealedItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  // Hàm che chuỗi (nhận tham số info)
+  const getMaskedValue = (info) => {
     if (!info.canHide) return info.value;
     if (info.type === 'email') {
       const [name, domain] = info.value.split('@');
@@ -22,60 +37,13 @@ const RevealContactItem = ({ info, copied, onCopy }) => {
     return info.value;
   };
 
-  const handleCopy = () => {
-    if (info.canHide) setIsRevealed(true); // Tự động hiện số nếu bấm Copy
-    onCopy(info.value);
-  };
-
-  // phần hiển thị thông tin liên hệ với các nút copy và reveal
-  return (
-    <div className="group p-5 rounded-3xl border border-slate-300 dark:border-slate-800 bg-slate-50/50 duration-300 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/10">
-      <div className="flex items-center gap-5">
-        <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 transition-colors duration-300 group-hover:scale-110">
-          {info.icon}
-        </div>
-        <div>
-          <p className="text-xs font-semibold uppercase text-slate-400 mb-0.5">{info.label}</p>
-          <div className="flex items-center gap-2">
-            <p className="text-slate-800 duration-300 dark:text-slate-200 font-medium break-all">
-              {info.canHide && !isRevealed ? getMaskedValue() : info.value}
-            </p>
-
-          </div>
-        </div>
-      </div>
-      {/* phần hiển thị các nút copy và reveal */}
-      <div className="flex items-center gap-2">
-      {info.canHide && (
-        <button
-          onClick={() => setIsRevealed(!isRevealed)}
-          className="p-2.5 rounded-xl bg-slate-50 duration-300 dark:bg-slate-800/50 text-slate-400 hover:text-blue-500 transition-colors focus:outline-none"
-          title={isRevealed ? "Ẩn" : "Hiện"}
-        >
-          {isRevealed ? <EyeOff size={18} /> : <Eye size={18} />}
-        </button>
-      )}
-      {info.canCopy && (
-        <button onClick={handleCopy}
-          className="p-2.5 rounded-xl bg-slate-50 duration-300 dark:bg-slate-800/50 text-slate-400 hover:text-blue-500 transition-colors focus:outline-none">
-          {copied === info.value ? <Check size={18} className="text-emerald-500" /> : <Copy size={18} />}
-        </button>
-      )}
-      </div>
-    </div>
-  );
-};
-
-const Contact = () => {
-  const { t } = useTranslation();
-  const [copied, setCopied] = useState("");
-
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState({ loading: false, success: false, error: false });
-
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text);
-    setCopied(text);
+  // Hàm copy tích hợp tự động mở chữ
+  const handleCopyItem = (info, index) => {
+    if (info.canHide) {
+      setRevealedItems(prev => ({ ...prev, [index]: true })); // Tự động mở
+    }
+    navigator.clipboard.writeText(info.value);
+    setCopied(info.value);
     setTimeout(() => setCopied(""), 2000);
   };
 
@@ -101,12 +69,12 @@ const Contact = () => {
     }
   };
 
- 
   const contactInfo = [
     {
       icon: <Mail className="text-blue-400" size={22} />,
       label: t('contact.labels.email'),
       value: "trantu7112003@gmail.com",
+      hover: "hover:text-blue-400",
       canCopy: true,
       type: 'email',
       canHide: true
@@ -115,6 +83,7 @@ const Contact = () => {
       icon: <Phone className="text-emerald-400" size={22} />,
       label: t('contact.labels.phone'),
       value: "0772911890",
+      hover: "hover:text-emerald-400",
       canCopy: true,
       type: 'phone',
       canHide: true
@@ -129,14 +98,12 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    // { icon: <Facebook size={24} />, link: "https://www.facebook.com/Tu.SayHiii" },
     { icon: <Facebook size={24} />, link: "https://www.facebook.com/share/19TP6z7fDD/" },
     { icon: <Github size={24} />, link: "https://github.com/trantu0711" },
     { icon: <Linkedin size={24} />, link: "https://www.linkedin.com/in/tu-tran-6a8a1a3b9" },
     { icon: <Tiktok size={24} />, link: "https://www.tiktok.com/@tran.tu0711" },
   ];
 
-  // phần hiển thị toàn bộ section liên hệ với form gửi mail và thông tin liên hệ
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-slate-50 dark:bg-[#0b0b17] transition-colors duration-300">
       <div className="container mx-auto px-6 relative z-10 w-full lg:w-[80%]">
@@ -152,15 +119,47 @@ const Contact = () => {
             transition={{ duration: 1 }}
             className="lg:col-span-2 space-y-6 "
           >
-        
-            {contactInfo.map((info, index) => (
-              <RevealContactItem
-                key={index}
-                info={info}
-                copied={copied}
-                onCopy={copyToClipboard}
-              />
-            ))}
+          
+            {contactInfo.map((info, index) => {
+              const isRevealed = !!revealedItems[index]; // Kiểm tra xem dòng này đang mở hay đóng
+
+              return (
+                <div key={index} className="group p-5 rounded-3xl border border-slate-300 dark:border-slate-800 bg-slate-50/50 duration-300 dark:bg-[#12122a]/50 backdrop-blur-md flex items-center justify-between hover:shadow-xl hover:shadow-blue-500/10">
+                  <div className="flex items-center gap-5">
+                    <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 transition-colors duration-300 group-hover:scale-110">
+                      {info.icon}
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase text-slate-400 mb-0.5">{info.label}</p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-slate-800 duration-300 dark:text-slate-200 font-medium break-all">
+                          {info.canHide && !isRevealed ? getMaskedValue(info) : info.value}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-2">
+                    {info.canHide && (
+                      <button
+                        onClick={() => toggleReveal(index)}
+                        className={`p-2.5 rounded-xl bg-slate-50 duration-300 dark:bg-slate-800/50 text-slate-400 ${info.hover} transition-colors focus:outline-none cursor-pointer border border-slate-300 dark:border-slate-800/50`}
+                        title={isRevealed ? "Ẩn" : "Hiện"}
+                      >
+                        {isRevealed ? <EyeOff size={18} /> : <Eye size={18} />}
+                      </button>
+                    )}
+                    {info.canCopy && (
+                      <button onClick={() => handleCopyItem(info, index)}
+                        className={`p-2.5 rounded-xl bg-slate-50 duration-300 dark:bg-slate-800/50 text-slate-400 ${info.hover} transition-colors focus:outline-none cursor-pointer border border-slate-300 dark:border-slate-800/50`}
+                      >
+                        {copied === info.value ? <Check size={18} className="text-emerald-500" /> : <Copy size={18} />}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
 
             {/* Connect with me: */}
             <div className="pt-7 text-center lg:text-left">
@@ -174,6 +173,7 @@ const Contact = () => {
               </div>
             </div>
           </motion.div>
+
           {/* Form gửi mail*/}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -218,15 +218,14 @@ const Contact = () => {
                   rows="5"
                   className="w-full bg-slate-50 dark:bg-[#0b0b17] text-slate-900 dark:text-white border border-slate-300 transition-colors duration-300 dark:border-slate-800 rounded-2xl px-5 py-4 focus:border-blue-500 outline-none resize-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
                   placeholder={t('contact.form.placeholder_message')}
-                ></textarea>
+                />
               </div>
-              
 
               <div className="md:col-span-2">
                 <button
                   disabled={status.loading}
                   type="submit"
-                  className={`w-full py-5 text-white font-bold rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl ${status.success ? 'bg-emerald-500' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-600/25'}`}
+                  className={`w-full py-5 text-white font-bold cursor-pointer rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl ${status.success ? 'bg-emerald-500' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-600/25'}`}
                 >
                   {status.loading ? <Loader2 className="animate-spin" /> : <Send size={20} />}
                   <span>

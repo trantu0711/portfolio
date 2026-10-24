@@ -9,10 +9,11 @@ const Skills = () => {
     {
       title: t('skills.groups.frontend'),
       icon: <Monitor className="text-blue-400" size={28} />,
-      skills: ["ReactJS", "JavaScript", "HTML5/CSS3", "Tailwind CSS", "Responsive Design", "Bootstrap 5", "REST API Integration"],
+      skills: ["ReactJS", "JavaScript", "HTML5/CSS3", "Tailwind CSS","Bootstrap 5", "Responsive Design", "REST API Integration"],
       color: "from-blue-500/20 to-cyan-500/5",
       borderColor: "group-hover:border-blue-500/50",
-      span: "md:col-span-2" // Card này rộng hơn
+      tagHover: "hover:border-blue-400 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-300",
+      span: "md:col-span-3" // Card này rộng hơn
     },
     {
       title: t('skills.groups.backend'),
@@ -20,15 +21,8 @@ const Skills = () => {
       skills: ["ASP.NET (C#)", "MySQL", "PHP", "SQL Server", "NodeJS"],
       color: "from-emerald-500/20 to-teal-500/5",
       borderColor: "group-hover:border-emerald-500/50",
-      span: "md:col-span-1"
-    },
-    {
-      title: t('skills.groups.tools'),
-      icon: <Terminal className="text-orange-400" size={28} />,
-      skills: ["Git/GitHub", "Wordpress", "Postman", "Figma", "VS Code"],
-      color: "from-orange-500/20 to-yellow-500/5",
-      borderColor: "group-hover:border-orange-500/50",
-      span: "md:col-span-1"
+      tagHover: "hover:border-emerald-400 hover:text-emerald-600 dark:hover:border-emerald-400 dark:hover:text-emerald-300",
+      span: "md:col-span-2"
     },
     {
       title: t('skills.soft_skills_title'),
@@ -36,8 +30,19 @@ const Skills = () => {
       skills: t('skills.soft_skills_list', { returnObjects: true }) || [],
       color: "from-purple-500/20 to-pink-500/5",
       borderColor: "group-hover:border-purple-500/50",
+      tagHover: "hover:border-purple-400 hover:text-purple-600 dark:hover:border-purple-400 dark:hover:text-purple-300",
       span: "md:col-span-2"
-    }
+    },
+    {
+      title: t('skills.groups.tools'),
+      icon: <Terminal className="text-orange-400" size={28} />,
+      skills: ["Git/GitHub", "Wordpress", "Postman", "Figma", "VS Code"],
+      color: "from-orange-500/20 to-yellow-500/5",
+      borderColor: "group-hover:border-orange-500/50",
+      tagHover: "hover:border-orange-400 hover:text-orange-600 dark:hover:border-orange-400 dark:hover:text-orange-300",
+      span: "md:col-span-3"
+    },
+    
   ];
 
   return (
@@ -58,7 +63,7 @@ const Skills = () => {
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           {skillGroups.map((group, index) => (
             <motion.div
               key={index}
@@ -76,14 +81,14 @@ const Skills = () => {
                   <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800 shadow-lg transition-all duration-300 group-hover:scale-110">
                     {group.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-800 duration-300 dark:text-white">{group.title}</h3>
+                  <p className="text-xl font-bold text-slate-800 duration-300 dark:text-white">{group.title}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-3">
                   {group.skills.map((skill, sIndex) => (
                     <span
                       key={sIndex}
-                      className="px-5 py-2.5 rounded-2xl bg-slate-50 duration-300 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700/50 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition-colors shadow-sm"
+                      className={`px-5 py-2.5 rounded-2xl bg-slate-50 duration-300 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700/50 text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors shadow-sm ${group.tagHover}`}
                     >
                       {skill}
                     </span>

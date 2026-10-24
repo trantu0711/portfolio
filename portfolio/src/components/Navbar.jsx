@@ -77,7 +77,7 @@ const Navbar = () => {
 
       );
     } else {
-      // Dán cụm <svg> cờ Việt Nam thuần React vào đây
+      
       return (
         <svg width={30} height={20} viewBox="0 0 30 20" fill="none">
           <rect width={30} height={20} fill="#F5F5F5" />
@@ -118,10 +118,10 @@ const Navbar = () => {
         {/* Action Buttons (Language & Dark Mode) */}
         <div className="flex items-center gap-3 md:pr-10">
 
-          {/* Nút chuyển đổi ngôn ngữ theo yêu cầu hình ảnh */}
+          {/* Nút chuyển đổi ngôn ngữ */}
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-blue-50/50 dark:bg-slate-800/50 text-blue-500 hover:bg-blue-100 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm"
+            className="flex items-center gap-2 px-3 py-2 rounded-full bg-blue-50/50 dark:bg-slate-800/50 text-blue-500 hover:bg-blue-100 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm cursor-pointer"
           >
             {renderFlag()} {/* Gọi hàm vẽ SVG trực tiếp ở đây */}
             {/* <Languages size={20} /> */}
@@ -133,7 +133,7 @@ const Navbar = () => {
           {/* Nút Dark Mode hình tròn tối giản */}
           <button
             onClick={toggleDark}
-            className="p-2.5 rounded-full bg-blue-50/50 dark:bg-slate-800/50 text-blue-500 hover:bg-blue-100 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm"
+            className="p-2.5 rounded-full bg-blue-50/50 dark:bg-slate-800/50 text-blue-500 hover:bg-blue-100 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm cursor-pointer"
           >
             {dark ? (
               <Sun size={20} className="text-yellow-500" />
